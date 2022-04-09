@@ -8,19 +8,15 @@
 This adds the command `cargo bump` which bumps the current version in your
 `Cargo.toml`.
 
-Clone this repo, then just install this thingy with:
+## installation
+
+Clone this repo with `git`, then `cd` into the directory and just install this thingy with:
 
 ```shell
 cargo install --path .
 ```
 
 And *away* you go.
-
-## installation
-
-Install using cargo:
-
-`cargo install cargo-bump`
 
 ## examples
 
