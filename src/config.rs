@@ -14,7 +14,7 @@ pub fn get_config() -> Config {
 fn build_cli_parser<'a, 'b>() -> App<'a, 'b> {
     App::new("cargo-bump")
         .version(VERSION)
-        .author("Wraithan McCarroll <xwraithanx@gmail.com>")
+        // .author("Wraithan McCarroll <xwraithanx@gmail.com>")
         .usage(
             "cargo bump [<version> | major | minor | patch] [FLAGS]
 
@@ -60,12 +60,6 @@ fn build_cli_parser<'a, 'b>() -> App<'a, 'b> {
                 .takes_value(true)
                 .help("Optional build metadata for this version."),
         )
-        .arg(
-            Arg::with_name("git-tag")
-                .short("g")
-                .long("git-tag")
-                .help("Optional commit the updated version and create a git tag."),
-        )
 }
 
 pub struct Config {
@@ -80,7 +74,8 @@ impl Config {
             .expect("Invalid semver version, expected version or major, minor, patch");
         let build_metadata = matches.value_of("build-metadata").map(parse_identifiers);
         let pre_release = matches.value_of("pre-release").map(parse_identifiers);
-        let git_tag = matches.is_present("git-tag");
+        // because, why *not*?
+        let git_tag = true;
         let mut metadata_cmd = MetadataCommand::new();
         if let Some(path) = matches.value_of("manifest-path") {
             metadata_cmd.manifest_path(path);

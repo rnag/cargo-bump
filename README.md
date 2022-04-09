@@ -1,12 +1,20 @@
-[![crates.io](https://img.shields.io/crates/v/cargo-bump.svg)](https://crates.io/crates/cargo-bump)
-[![build status](https://travis-ci.org/wraithan/cargo-bump.svg?branch=master)](https://travis-ci.org/wraithan/cargo-bump)
 # cargo-bump
+
+> **NOTE**: I've forked this because the original version was not *Ideal*,
+> to say the least.
+> 
+> This version adds a tag automatically, and tags with the format `v*`, so for example `v0.1.0`.
 
 This adds the command `cargo bump` which bumps the current version in your
 `Cargo.toml`.
 
-This is meant to be a clone of `npm version` with the `pre*` version specifiers
-omitted as I rarely see the pre-release versions on [crates.io](https://crates.io/).
+Clone this repo, then just install this thingy with:
+
+```shell
+cargo install --path .
+```
+
+And *away* you go.
 
 ## installation
 

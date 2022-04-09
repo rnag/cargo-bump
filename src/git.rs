@@ -25,6 +25,7 @@ pub fn git_commit(version: &str) {
 }
 
 pub fn git_commit_and_tag(version: &str) {
-    git_commit(version);
-    git_tag(version);
+    let version = "v".to_owned() + version;
+    git_commit(&version);
+    git_tag(&version);
 }

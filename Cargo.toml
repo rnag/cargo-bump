@@ -1,15 +1,12 @@
 [package]
-authors = ["Wraithan (Chris McDonald) <xwraithanx@gmail.com>"]
-description = "Increments the version number of the current project."
+authors = ["Ritvik Nag <rv.kvetch@gmail.com>"]
+description = "Increments the version number of the current project. I've forked this because the original version was not ideal."
 keywords = ["cargo", "version", "bump"]
 license = "ISC"
 name = "cargo-bump"
 readme = "README.md"
-repository = "https://github.com/wraithan/cargo-bump"
+repository = "https://github.com/rnag/cargo-bump"
 version = "1.1.0"
-
-[badges]
-travis-ci = {repository = "wraithan/cargo-bump", branch = "master" }
 
 [dependencies]
 clap = "2.26.0"
